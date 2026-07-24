@@ -109,7 +109,7 @@ export default function RootLayout({
                 </div>
               </div>
               <div className="mt-12 pt-8 border-t border-border-light text-xs text-text-muted">
-                {site.name}
+                Built by Palmshed.
               </div>
             </div>
           </footer>
