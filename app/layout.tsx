@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { site } from "@/lib/site";
 import "./globals.css";
 import { A11yProvider } from "@/components/a11y-provider";
@@ -37,8 +38,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <link rel="icon" href="/favicon.ico" sizes="any" />
-        <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+        <link rel="icon" href="/base/favicon.ico" sizes="any" />
+        <link rel="icon" href="/base/favicon.svg" type="image/svg+xml" />
         <link rel="canonical" href={site.url} />
       </head>
       <body className="antialiased">
@@ -49,26 +50,26 @@ export default function RootLayout({
 
           <header className="site-header border-b border-border">
             <div className="container-wide py-6 flex items-center justify-between">
-              <a href="/" className="flex items-center gap-3">
+              <Link href="/" className="flex items-center gap-3">
                 <span
                   className="text-2xl font-semibold tracking-tight"
                   style={{ fontFamily: "var(--serif)" }}
                 >
                   {site.name}
                 </span>
-              </a>
+              </Link>
               <nav
                 className="hidden md:flex items-center gap-8 text-sm text-text-secondary"
                 aria-label="Main navigation"
               >
                 {site.navigation.map((item) => (
-                  <a
+                  <Link
                     key={item.href}
                     href={item.href}
                     className="hover:text-accent transition-colors"
                   >
                     {item.label}
-                  </a>
+                  </Link>
                 ))}
               </nav>
             </div>
@@ -99,9 +100,9 @@ export default function RootLayout({
                         {section.title}
                       </span>
                       {section.links.map((link) => (
-                        <a key={link.href} href={link.href} className="hover:text-accent">
+                        <Link key={link.href} href={link.href} className="hover:text-accent">
                           {link.label}
-                        </a>
+                        </Link>
                       ))}
                     </div>
                   ))}

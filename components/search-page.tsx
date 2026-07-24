@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 import { site } from "@/lib/site";
 
 export default function SearchPage() {
@@ -56,7 +57,7 @@ export default function SearchPage() {
             </p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {results.map((item) => (
-                <a
+                <Link
                   key={item.slug}
                   href={`/${item.slug}`}
                   className="group block p-6 rounded-lg border border-border hover:border-accent hover:bg-surface-hover transition-all"
@@ -72,7 +73,7 @@ export default function SearchPage() {
                       {item.description}
                     </p>
                   )}
-                </a>
+                </Link>
               ))}
             </div>
           </div>
