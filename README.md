@@ -2,6 +2,8 @@
 
 A reusable foundation for static-first websites.
 
+This project follows the [Palmshed Engineering Philosophy](https://github.com/palmshed/palmshed.github.io/blob/main/PHILOSOPHY.md).
+
 ## What it includes
 
 - Next.js App Router with TypeScript
